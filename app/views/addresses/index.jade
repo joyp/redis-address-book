@@ -1,0 +1,22 @@
+extends ../shared/template
+block content
+
+  h2 Address Book
+  .row
+    .col-xs-12
+      table.table.table-bordered
+        thead
+          tr
+            th First Name
+            th Last Name
+            th Twitter
+            th Color
+        tbody
+          each address in addresses
+            tr
+              td= address.firstName
+              td= address.lastName
+              td= address.twitter
+              td(style='background-color:#{address.color};')= address.color
+
+block scripts

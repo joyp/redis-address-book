@@ -1,0 +1,24 @@
+extends ../shared/template
+block content
+  .row
+    h2 Add New Address
+  .row
+    form.form-horizontal(role='form', method='post', id='newAddress', action= '/addresses')
+      input#userId(type='hidden', name= 'userId')
+      .col-xs-4
+        .form-group
+          label(for='firstName') Contact First Name
+          input.form-control#firstName(type='text', name='firstName', auto-focus=true)
+        .form-group
+          label(for='lastName') Contact Last Name
+          input.form-control#lastName(type='text', name='lastName')
+        .form-group
+          label(for='contactColor') Select Color for Contact
+          input.form-control#contactColor(type='color', name='contactColor')
+        .form-group
+          label(for='contactTwitter') Contact Twitter Account
+          input.form-control#contactTwitter(type='text', name='contactTwitter')
+        button.btni-lg.btn-primary(type='submit', form='newAddress') Save Contact
+      .col-xs-8
+
+block scripts

@@ -1,0 +1,18 @@
+extends ../shared/template
+block content
+  h2 New User
+  .row
+    .col-xs-3
+      form(role='role', method='post', action='/register')
+        .form-group
+          label(for='email') Email Address
+          input.form-control#email(type='email', name='email', autofocus=true)
+        .form-group
+          label(for='password') Password
+          input.form-control#password(type='password', name='password')
+        button.btn.btn-primary(type='submit') Register
+  .row
+    .col-xs-9
+
+block scripts
+  script(src='/js/user/new.js')
